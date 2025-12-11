@@ -59,6 +59,7 @@ const Navbar: React.FC = () => {
               Log in
             </Link>
             <Link
+              to="/signup"
               to="/demo"
               className="h-10 flex items-center rounded-xl bg-primary px-5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary/90 hover:shadow-primary/30"
             >
@@ -113,7 +114,7 @@ const Navbar: React.FC = () => {
               Log in
             </Link>
             <Link
-              to="/demo"
+              to="/signup"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full text-center py-2 text-sm font-bold text-white bg-primary rounded-lg shadow-lg shadow-primary/20"
             >

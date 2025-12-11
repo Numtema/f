@@ -35,6 +35,7 @@ const Home: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-4">
                 <Link
+                  to="/signup"
                   to="/demo"
                   className="flex items-center justify-center rounded-xl h-14 px-8 bg-primary hover:bg-primary-dark text-white text-base font-bold transition-all shadow-xl shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-1"
                 >
@@ -289,6 +290,7 @@ const Home: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-5 mt-4">
                 <Link
+                  to="/signup"
                   to="/demo"
                   className="bg-white text-primary hover:bg-blue-50 rounded-2xl px-10 py-5 font-bold text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
                 >
