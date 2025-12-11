@@ -6,37 +6,37 @@ const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <div class="flex min-h-screen flex-col bg-background-light text-text-main font-body">
+    <div className="flex min-h-screen flex-col bg-background-light text-text-main font-body">
       <Navbar />
-      <main class="relative flex flex-col items-center">
+      <main className="relative flex flex-col items-center">
         {/* Hero Section */}
-        <section class="w-full max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8">
-          <div class="mx-auto max-w-3xl space-y-6">
-            <h1 class="font-display text-4xl font-extrabold tracking-tight text-text-main sm:text-5xl lg:text-6xl">
-              Investissez dans votre <span class="text-primary">croissance</span>
+        <section className="w-full max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl space-y-6">
+            <h1 className="font-display text-4xl font-extrabold tracking-tight text-text-main sm:text-5xl lg:text-6xl">
+              Investissez dans votre <span className="text-primary">croissance</span>
             </h1>
-            <p class="mx-auto max-w-2xl text-lg text-text-secondary">
+            <p className="mx-auto max-w-2xl text-lg text-text-secondary">
               Choisissez le plan adapté à vos besoins. Changez ou annulez à tout
               moment. Commencez gratuitement, sans carte bancaire.
             </p>
             {/* Toggle Switch */}
-            <div class="mt-10 flex items-center justify-center gap-4">
-              <span class="text-sm font-medium text-text-secondary">
+            <div className="mt-10 flex items-center justify-center gap-4">
+              <span className="text-sm font-medium text-text-secondary">
                 Mensuel
               </span>
               <button
                 onClick={() => setIsAnnual(!isAnnual)}
-                class="relative h-8 w-14 rounded-full bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="relative h-8 w-14 rounded-full bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <span
-                  class={`absolute top-1 size-6 rounded-full bg-white transition-transform ${
+                  className={`absolute top-1 size-6 rounded-full bg-white transition-transform ${
                     isAnnual ? 'translate-x-7' : 'translate-x-1'
                   }`}
                 ></span>
               </button>
-              <span class="text-sm font-bold text-text-main flex items-center gap-2">
+              <span className="text-sm font-bold text-text-main flex items-center gap-2">
                 Annuel
-                <span class="rounded-full bg-green-100 px-2 py-0.5 text-xs font-bold text-green-700">
+                <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-bold text-green-700">
                   -20%
                 </span>
               </span>
@@ -45,73 +45,73 @@ const Pricing: React.FC = () => {
         </section>
 
         {/* Pricing Cards Section */}
-        <section class="w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <section className="w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Card 1: Équipe */}
-            <div class="relative flex flex-col rounded-2xl border border-neutral-border bg-white p-8 shadow-soft hover:shadow-lg transition-all duration-300">
-              <div class="mb-6">
-                <h3 class="font-display text-xl font-bold text-text-main">
+            <div className="relative flex flex-col rounded-2xl border border-neutral-border bg-white p-8 shadow-soft hover:shadow-lg transition-all duration-300">
+              <div className="mb-6">
+                <h3 className="font-display text-xl font-bold text-text-main">
                   Équipe
                 </h3>
-                <p class="mt-2 text-sm text-text-secondary">
+                <p className="mt-2 text-sm text-text-secondary">
                   Idéal pour les startups et les petites équipes qui débutent avec
                   l'IA.
                 </p>
               </div>
-              <div class="mb-6 flex items-baseline gap-1">
-                <span class="font-display text-4xl font-black text-text-main">
+              <div className="mb-6 flex items-baseline gap-1">
+                <span className="font-display text-4xl font-black text-text-main">
                   {isAnnual ? '39€' : '49€'}
                 </span>
-                <span class="text-base font-medium text-text-secondary">
+                <span className="text-base font-medium text-text-secondary">
                   /mois
                 </span>
               </div>
-              <button class="mb-8 w-full rounded-xl bg-neutral-surface py-3 text-sm font-bold text-text-main hover:bg-neutral-border transition-colors">
+              <button className="mb-8 w-full rounded-xl bg-neutral-surface py-3 text-sm font-bold text-text-main hover:bg-neutral-border transition-colors">
                 Commencer l'essai gratuit
               </button>
-              <div class="flex-1 space-y-4">
+              <div className="flex-1 space-y-4">
                 {[
                   '50 leads qualifiés/mois',
                   '5 agents IA vidéo',
                   'Support email standard',
                   'Analytiques de base',
                 ].map((feature, idx) => (
-                  <div key={idx} class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-green-500 text-[20px]">
+                  <div key={idx} className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-green-500 text-[20px]">
                       check_circle
                     </span>
-                    <span class="text-sm text-text-secondary">{feature}</span>
+                    <span className="text-sm text-text-secondary">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Card 2: Pro (Highlighted) */}
-            <div class="relative flex flex-col rounded-2xl border-2 border-primary bg-white p-8 shadow-glow transform md:-translate-y-4">
-              <div class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
+            <div className="relative flex flex-col rounded-2xl border-2 border-primary bg-white p-8 shadow-glow transform md:-translate-y-4">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
                 Populaire
               </div>
-              <div class="mb-6">
-                <h3 class="font-display text-xl font-bold text-text-main">
+              <div className="mb-6">
+                <h3 className="font-display text-xl font-bold text-text-main">
                   Pro
                 </h3>
-                <p class="mt-2 text-sm text-text-secondary">
+                <p className="mt-2 text-sm text-text-secondary">
                   Pour les entreprises en croissance cherchant à scaler leur
                   acquisition.
                 </p>
               </div>
-              <div class="mb-6 flex items-baseline gap-1">
-                <span class="font-display text-4xl font-black text-text-main">
+              <div className="mb-6 flex items-baseline gap-1">
+                <span className="font-display text-4xl font-black text-text-main">
                    {isAnnual ? '79€' : '99€'}
                 </span>
-                <span class="text-base font-medium text-text-secondary">
+                <span className="text-base font-medium text-text-secondary">
                   /mois
                 </span>
               </div>
-              <button class="mb-8 w-full rounded-xl bg-primary py-3 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+              <button className="mb-8 w-full rounded-xl bg-primary py-3 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
                 Choisir le plan Pro
               </button>
-              <div class="flex-1 space-y-4">
+              <div className="flex-1 space-y-4">
                 {[
                   'Leads illimités',
                   '20 agents IA vidéo',
@@ -119,11 +119,11 @@ const Pricing: React.FC = () => {
                   'Support prioritaire',
                   'Personnalisation avancée',
                 ].map((feature, idx) => (
-                  <div key={idx} class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-primary text-[20px]">
+                  <div key={idx} className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-primary text-[20px]">
                       check_circle
                     </span>
-                    <span class="text-sm font-medium text-text-main">
+                    <span className="text-sm font-medium text-text-main">
                       {feature}
                     </span>
                   </div>
@@ -132,24 +132,24 @@ const Pricing: React.FC = () => {
             </div>
 
             {/* Card 3: Entreprise */}
-            <div class="relative flex flex-col rounded-2xl border border-neutral-border bg-white p-8 shadow-soft hover:shadow-lg transition-all duration-300">
-              <div class="mb-6">
-                <h3 class="font-display text-xl font-bold text-text-main">
+            <div className="relative flex flex-col rounded-2xl border border-neutral-border bg-white p-8 shadow-soft hover:shadow-lg transition-all duration-300">
+              <div className="mb-6">
+                <h3 className="font-display text-xl font-bold text-text-main">
                   Entreprise
                 </h3>
-                <p class="mt-2 text-sm text-text-secondary">
+                <p className="mt-2 text-sm text-text-secondary">
                   Solutions sur mesure pour les grandes organisations.
                 </p>
               </div>
-              <div class="mb-6 flex items-baseline gap-1">
-                <span class="font-display text-3xl font-black text-text-main">
+              <div className="mb-6 flex items-baseline gap-1">
+                <span className="font-display text-3xl font-black text-text-main">
                   Sur devis
                 </span>
               </div>
-              <button class="mb-8 w-full rounded-xl bg-white border-2 border-neutral-border py-3 text-sm font-bold text-text-main hover:border-primary hover:text-primary transition-colors">
+              <button className="mb-8 w-full rounded-xl bg-white border-2 border-neutral-border py-3 text-sm font-bold text-text-main hover:border-primary hover:text-primary transition-colors">
                 Contacter les ventes
               </button>
-              <div class="flex-1 space-y-4">
+              <div className="flex-1 space-y-4">
                 {[
                   'API dédiée & Webhooks',
                   'IA personnalisée (Fine-tuning)',
@@ -157,11 +157,11 @@ const Pricing: React.FC = () => {
                   'Account manager dédié',
                   'SSO & Sécurité avancée',
                 ].map((feature, idx) => (
-                  <div key={idx} class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-text-main text-[20px]">
+                  <div key={idx} className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-text-main text-[20px]">
                       check_circle
                     </span>
-                    <span class="text-sm text-text-secondary">{feature}</span>
+                    <span className="text-sm text-text-secondary">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -170,16 +170,16 @@ const Pricing: React.FC = () => {
         </section>
 
         {/* Add-ons Section */}
-        <section class="w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-          <div class="mb-10">
-            <h2 class="font-display text-2xl font-bold text-text-main">
+        <section className="w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="font-display text-2xl font-bold text-text-main">
               Extensions & Add-ons
             </h2>
-            <p class="text-text-secondary mt-2">
+            <p className="text-text-secondary mt-2">
               Boostez votre abonnement avec des fonctionnalités supplémentaires.
             </p>
           </div>
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <AddOnCard
               icon="videocam"
               title="Minutes Vidéo +"
@@ -216,12 +216,12 @@ const Pricing: React.FC = () => {
         </section>
 
         {/* FAQ Section */}
-        <section class="w-full max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
-          <div class="rounded-2xl bg-neutral-surface p-8 sm:p-12">
-            <h2 class="mb-8 text-center font-display text-2xl font-bold text-text-main">
+        <section className="w-full max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
+          <div className="rounded-2xl bg-neutral-surface p-8 sm:p-12">
+            <h2 className="mb-8 text-center font-display text-2xl font-bold text-text-main">
               Questions Fréquentes
             </h2>
-            <div class="space-y-4">
+            <div className="space-y-4">
               <FaqItem
                 question="Puis-je changer de plan à tout moment ?"
                 answer="Oui, vous pouvez upgrader ou downgrader votre plan à tout moment depuis votre tableau de bord. Les changements de facturation seront appliqués au prorata."
@@ -251,19 +251,19 @@ const AddOnCard: React.FC<{
   color: string;
   bgColor: string;
 }> = ({ icon, title, desc, price, color, bgColor }) => (
-  <div class="group flex flex-col justify-between rounded-xl border border-neutral-border bg-white p-5 hover:border-primary/50 transition-colors cursor-pointer">
+  <div className="group flex flex-col justify-between rounded-xl border border-neutral-border bg-white p-5 hover:border-primary/50 transition-colors cursor-pointer">
     <div>
       <div
-        class={`mb-3 flex size-10 items-center justify-center rounded-lg ${bgColor} ${color}`}
+        className={`mb-3 flex size-10 items-center justify-center rounded-lg ${bgColor} ${color}`}
       >
-        <span class="material-symbols-outlined">{icon}</span>
+        <span className="material-symbols-outlined">{icon}</span>
       </div>
-      <h4 class="font-display font-bold text-text-main">{title}</h4>
-      <p class="mt-1 text-xs text-text-secondary">{desc}</p>
+      <h4 className="font-display font-bold text-text-main">{title}</h4>
+      <p className="mt-1 text-xs text-text-secondary">{desc}</p>
     </div>
-    <div class="mt-4 flex items-center justify-between">
-      <span class="text-sm font-bold text-text-main">{price}</span>
-      <span class="material-symbols-outlined text-neutral-300 group-hover:text-primary transition-colors">
+    <div className="mt-4 flex items-center justify-between">
+      <span className="text-sm font-bold text-text-main">{price}</span>
+      <span className="material-symbols-outlined text-neutral-300 group-hover:text-primary transition-colors">
         add_circle
       </span>
     </div>
@@ -274,15 +274,15 @@ const FaqItem: React.FC<{ question: string; answer: string }> = ({
   question,
   answer,
 }) => (
-  <div class="rounded-xl bg-white p-4 shadow-sm">
-    <details class="group">
-      <summary class="flex cursor-pointer items-center justify-between font-medium text-text-main">
+  <div className="rounded-xl bg-white p-4 shadow-sm">
+    <details className="group">
+      <summary className="flex cursor-pointer items-center justify-between font-medium text-text-main">
         <span>{question}</span>
-        <span class="material-symbols-outlined text-text-secondary transition group-open:rotate-180">
+        <span className="material-symbols-outlined text-text-secondary transition group-open:rotate-180">
           expand_more
         </span>
       </summary>
-      <div class="mt-3 text-sm text-text-secondary">{answer}</div>
+      <div className="mt-3 text-sm text-text-secondary">{answer}</div>
     </details>
   </div>
 );
