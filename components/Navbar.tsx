@@ -60,6 +60,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link
               to="/signup"
+              to="/demo"
               className="h-10 flex items-center rounded-xl bg-primary px-5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary/90 hover:shadow-primary/30"
             >
               Get Started
